@@ -7,6 +7,7 @@ require_relative '../lib/open_ai_api'
 prompt_title = ENV.fetch('prompt_box_prompt_title')
 query = ARGV[0].to_s.strip
 openai_api_key = ENV.fetch('openai_api_key')
+openai_model = ENV.fetch('openai_model', 'gpt-5-mini')
 
 response = "# #{prompt_title}\n"
 response << "--- \n"
@@ -30,7 +31,7 @@ else
 
   begin
     output = PromptBox::OpenAIApi.response(
-      model: 'gpt-4o-mini',
+      model: openai_model,
       instructions: prompt_instructions,
       input: query,
       api_key: openai_api_key,

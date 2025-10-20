@@ -367,8 +367,7 @@ Created by [Radoslav Stankov](https://github.com/RStankov)
 
 ## Repository
 
-[https://github.com/RStankov/PromptBox](https://github.com/RStankov/PromptBox)
-</string>
+[https://github.com/RStankov/PromptBox](https://github.com/RStankov/PromptBox)</string>
 	<key>uidata</key>
 	<dict>
 		<key>1940A409-66A6-4EA3-B64D-C83EBE0B1151</key>
@@ -440,13 +439,71 @@ Created by [Radoslav Stankov](https://github.com/RStankov)
 				<true/>
 			</dict>
 			<key>description</key>
-			<string></string>
+			<string>Taken from: https://platform.openai.com/api-keys</string>
 			<key>label</key>
 			<string>OpenAI API key</string>
 			<key>type</key>
 			<string>textfield</string>
 			<key>variable</key>
 			<string>openai_api_key</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>gpt-5-mini</string>
+				<key>pairs</key>
+				<array>
+					<array>
+						<string>gpt-5</string>
+						<string>gpt-5</string>
+					</array>
+					<array>
+						<string>gpt-5-mini</string>
+						<string>gpt-5-mini</string>
+					</array>
+					<array>
+						<string>gpt-5-nano</string>
+						<string>gpt-5-nano</string>
+					</array>
+					<array>
+						<string>gpt-5-codex</string>
+						<string>gpt-5-codex</string>
+					</array>
+					<array>
+						<string>gpt-5-pro</string>
+						<string>gpt-5-pro</string>
+					</array>
+					<array>
+						<string>gpt-4o</string>
+						<string></string>
+					</array>
+					<array>
+						<string>gpt-4o-mini</string>
+						<string>gpt-4o-mini</string>
+					</array>
+					<array>
+						<string>gpt-4.1</string>
+						<string></string>
+					</array>
+					<array>
+						<string>gpt-4.1-mini</string>
+						<string></string>
+					</array>
+					<array>
+						<string>gpt-4.1-nano</string>
+						<string>gpt-4.1-nano</string>
+					</array>
+				</array>
+			</dict>
+			<key>description</key>
+			<string>Model to be used for all prompts</string>
+			<key>label</key>
+			<string>OpenAI API model</string>
+			<key>type</key>
+			<string>popupbutton</string>
+			<key>variable</key>
+			<string>openai_model</string>
 		</dict>
 	</array>
 	<key>version</key>
