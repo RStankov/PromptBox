@@ -30,6 +30,7 @@ else
 
   begin
     output = PromptBox::OpenAIApi.response(
+      model: 'gpt-4o-mini',
       instructions: prompt_instructions,
       input: query,
       api_key: openai_api_key,
