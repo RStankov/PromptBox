@@ -25,7 +25,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>B0F00DB8-879D-4105-83D7-21BEA590F974</string>
+				<string>C6889CBF-7035-4582-8DCC-7FC3DAF1C85D</string>
 				<key>modifiers</key>
 				<integer>1048576</integer>
 				<key>modifiersubtext</key>
@@ -83,8 +83,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>B0F00DB8-879D-4105-83D7-21BEA590F974</key>
-		<array/>
 	</dict>
 	<key>createdby</key>
 	<string>Radoslav Stankov</string>
@@ -154,29 +152,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>ruby ./bin/copy.rb "$prompt_box_output"</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>B0F00DB8-879D-4105-83D7-21BEA590F974</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -221,6 +196,25 @@
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
 			<string>9537DD12-92D6-491A-8BE4-0384AD72F693</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{var:prompt_box_output}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>C6889CBF-7035-4582-8DCC-7FC3DAF1C85D</string>
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
@@ -423,14 +417,12 @@ Created by [Radoslav Stankov](https://github.com/RStankov)
 			<key>ypos</key>
 			<real>530</real>
 		</dict>
-		<key>B0F00DB8-879D-4105-83D7-21BEA590F974</key>
+		<key>C6889CBF-7035-4582-8DCC-7FC3DAF1C85D</key>
 		<dict>
-			<key>note</key>
-			<string>copy</string>
 			<key>xpos</key>
-			<real>970</real>
+			<real>1070</real>
 			<key>ypos</key>
-			<real>335</real>
+			<real>340</real>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
