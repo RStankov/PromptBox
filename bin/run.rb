@@ -18,7 +18,7 @@ variables = {
   'prompt_box_output' => '',
 }
 
-footer = "↩  Query"
+footer = "↩  Run"
 
 if prompt_instructions.empty?
   response << "**Can't find prompt**"
@@ -37,7 +37,7 @@ else
       api_key: openai_api_key,
     )
 
-    footer = '↩  Query · ⌘ + ↩  Copy'
+    footer = '↩  Run · ⌘ + ↩  Copy · ⌥ + ↩  Insert'
 
     variables['prompt_box_output'] = output
 

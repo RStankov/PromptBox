@@ -13,11 +13,12 @@ An Alfred workflow that lets you quickly run custom LLM prompts using OpenAI's A
 ## Installation
 
 1. Download and install the workflow in Alfred
-2. Configure your OpenAI API key:
+2. Configure your OpenAI API key and model:
    - Open Alfred Preferences → Workflows
    - Select "PromptBox"
    - Click the `[x]` button in the top right
    - Enter your OpenAI API key
+   - Select your preferred model (default: gpt-5-mini)
 
 ## Usage
 
@@ -29,7 +30,9 @@ An Alfred workflow that lets you quickly run custom LLM prompts using OpenAI's A
    - **Press ↩**: Run the prompt with custom input
    - **Press ⌘ + ↩**: Run the prompt with clipboard content as input
 4. View the AI response in the text view
-5. **Press ⌘ + ↩** again to copy the output to clipboard
+5. Choose an action:
+   - **Press ⌘ + ↩**: Copy the output to clipboard
+   - **Press ⌥ + ↩**: Insert the output into the foremost application
 
 ### Editing Prompts
 

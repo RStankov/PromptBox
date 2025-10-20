@@ -33,6 +33,16 @@
 				<key>vitoclose</key>
 				<false/>
 			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>4BCFF04A-8860-49BC-BADF-626C8AF1016C</string>
+				<key>modifiers</key>
+				<integer>524288</integer>
+				<key>modifiersubtext</key>
+				<string>↩  Insert</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
 		</array>
 		<key>9537DD12-92D6-491A-8BE4-0384AD72F693</key>
 		<array>
@@ -94,6 +104,25 @@
 	<string>PromptBox</string>
 	<key>objects</key>
 	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{var:prompt_box_output}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>C6889CBF-7035-4582-8DCC-7FC3DAF1C85D</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -202,25 +231,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>autopaste</key>
-				<false/>
-				<key>clipboardtext</key>
-				<string>{var:prompt_box_output}</string>
-				<key>ignoredynamicplaceholders</key>
-				<false/>
-				<key>transient</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>C6889CBF-7035-4582-8DCC-7FC3DAF1C85D</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>argument</key>
 				<string>{clipboard}</string>
 				<key>passthroughargument</key>
@@ -237,6 +247,25 @@
 			<string>9638B5C9-2218-4AF8-B7B3-3ABE893742E6</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<true/>
+				<key>clipboardtext</key>
+				<string>{var:prompt_box_output}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>4BCFF04A-8860-49BC-BADF-626C8AF1016C</string>
+			<key>version</key>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -299,11 +328,12 @@ An Alfred workflow that lets you quickly run custom LLM prompts using OpenAI's A
 ## Installation
 
 1. Download and install the workflow in Alfred
-2. Configure your OpenAI API key:
+2. Configure your OpenAI API key and model:
    - Open Alfred Preferences → Workflows
    - Select "PromptBox"
    - Click the `[x]` button in the top right
    - Enter your OpenAI API key
+   - Select your preferred model (default: gpt-5-mini)
 
 ## Usage
 
@@ -315,7 +345,9 @@ An Alfred workflow that lets you quickly run custom LLM prompts using OpenAI's A
    - **Press ↩**: Run the prompt with custom input
    - **Press ⌘ + ↩**: Run the prompt with clipboard content as input
 4. View the AI response in the text view
-5. **Press ⌘ + ↩** again to copy the output to clipboard
+5. Choose an action:
+   - **Press ⌘ + ↩**: Copy the output to clipboard
+   - **Press ⌥ + ↩**: Insert the output into the foremost application
 
 ### Editing Prompts
 
@@ -377,6 +409,13 @@ Created by [Radoslav Stankov](https://github.com/RStankov)
 			<key>ypos</key>
 			<real>540</real>
 		</dict>
+		<key>4BCFF04A-8860-49BC-BADF-626C8AF1016C</key>
+		<dict>
+			<key>xpos</key>
+			<real>1085</real>
+			<key>ypos</key>
+			<real>435</real>
+		</dict>
 		<key>60B210CD-3555-421E-A8B6-39D9D1315A93</key>
 		<dict>
 			<key>note</key>
@@ -419,9 +458,9 @@ Created by [Radoslav Stankov](https://github.com/RStankov)
 		<key>C6889CBF-7035-4582-8DCC-7FC3DAF1C85D</key>
 		<dict>
 			<key>xpos</key>
-			<real>1070</real>
+			<real>1065</real>
 			<key>ypos</key>
-			<real>340</real>
+			<real>235</real>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
@@ -432,7 +471,7 @@ Created by [Radoslav Stankov](https://github.com/RStankov)
 				<key>default</key>
 				<string></string>
 				<key>placeholder</key>
-				<string></string>
+				<string>sk-</string>
 				<key>required</key>
 				<true/>
 				<key>trim</key>
