@@ -444,7 +444,7 @@ Created by [Radoslav Stankov](https://github.com/RStankov)
 		<key>969C8627-7AB5-4ACF-8126-13F7E6D9D26D</key>
 		<dict>
 			<key>xpos</key>
-			<real>555</real>
+			<real>550</real>
 			<key>ypos</key>
 			<real>320</real>
 		</dict>
@@ -545,8 +545,10 @@ Created by [Radoslav Stankov](https://github.com/RStankov)
 			<string>openai_model</string>
 		</dict>
 	</array>
+	<key>variablesdontexport</key>
+	<array/>
 	<key>version</key>
-	<string></string>
+	<string>0.1.0</string>
 	<key>webaddress</key>
 	<string>https://github.com/RStankov/PromptBox</string>
 </dict>
