@@ -15,15 +15,15 @@ response << "--- \n"
 prompt_instructions = PromptBox::Prompts.find_prompt_instructions(prompt_title)
 
 variables = {
-  'prompt_box_output' => '',
+  'prompt_box_output' => ''
 }
 
-footer = "↩  Run"
+footer = '↩  Run'
 
 if prompt_instructions.empty?
   response << "**Can't find prompt**"
 elsif query.empty?
-  response << "Enter query ↩ "
+  response << 'Enter query ↩ '
 else
   response << "**Input** \n\n"
   response << "```\n#{query}\n``` \n\n"
@@ -34,7 +34,7 @@ else
       model: openai_model,
       instructions: prompt_instructions,
       input: query,
-      api_key: openai_api_key,
+      api_key: openai_api_key
     )
 
     footer = '↩  Run · ⌘ + ↩  Copy · ⌥ + ↩  Insert'
@@ -42,7 +42,7 @@ else
     variables['prompt_box_output'] = output
 
     response << "```\n#{output}\n```"
-  rescue => e
+  rescue StandardError => e
     response << "**ERROR**:\n:#{e.message}"
   end
 end
@@ -51,6 +51,6 @@ PromptBox::Alfred.output(
   PromptBox::Alfred.text_view(
     response,
     variables: variables,
-    footer: footer,
+    footer: footer
   )
 )
