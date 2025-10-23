@@ -25,7 +25,7 @@ begin
     api_key: openai_api_key
   )
 
-  IO.popen('pbcopy', 'w') { |pipe| pipe.write(output) }
+  IO.popen(['pbcopy'], 'w') { |pipe| pipe.write(output) }
 
   notifier.show('✅ Result copied to clipboard')
   notifier.close(after: 2)

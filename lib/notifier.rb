@@ -19,12 +19,20 @@ module PromptBox
     end
 
     def show(message)
-      `#{@binary} -title "#{@title}" -message "#{message}" -group "#{@group}" -sender "com.runningwithcrayons.Alfred"`
+      system(
+        @binary,
+        '-title', @title,
+        '-message', message,
+        '-group', @group,
+        '-sender', 'com.runningwithcrayons.Alfred',
+        out: File::NULL,
+        err: File::NULL
+      )
     end
 
     def close(after:)
       sleep(after)
-      `#{@binary} -remove '#{@group}' > /dev/null`
+      system(@binary, '-remove', @group, out: File::NULL, err: File::NULL)
     end
   end
 end
