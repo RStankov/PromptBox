@@ -169,7 +169,7 @@
 				<key>spellchecking</key>
 				<integer>0</integer>
 				<key>stackview</key>
-				<true/>
+				<false/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.userinterface.text</string>
@@ -194,7 +194,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>pb</string>
+				<string>p</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -453,7 +453,7 @@ Created by [Radoslav Stankov](https://github.com/RStankov)
 			<key>xpos</key>
 			<real>480</real>
 			<key>ypos</key>
-			<real>530</real>
+			<real>535</real>
 		</dict>
 		<key>C6889CBF-7035-4582-8DCC-7FC3DAF1C85D</key>
 		<dict>
