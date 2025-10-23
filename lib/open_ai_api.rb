@@ -14,17 +14,24 @@ module PromptBox
       request = Net::HTTP::Post.new(
         uri,
         'Content-Type' => 'application/json',
-        'Authorization' => "Bearer #{api_key}",
+        'Authorization' => "Bearer #{api_key}"
       )
 
       request.body = JSON.dump({
         model: model,
         instructions: instructions,
-        input: input,
+        input: input
       }.compact)
 
       # 120 - 2 minutes
-      http_response = Net::HTTP.start(uri.hostname, uri.port, use_ssl: true, open_timeout: 20, read_timeout: 1200) do |http|
+      http_response = Net::HTTP.start(
+        uri.hostname,
+        uri.port,
+        use_ssl: true,
+        verify_mode: OpenSSL::SSL::VERIFY_PEER,
+        open_timeout: 20,
+        read_timeout: 1200
+      ) do |http|
         http.request(request)
       end
 
@@ -36,7 +43,7 @@ module PromptBox
       raise 'No output message returned' if message.nil?
 
       text_block = message['content']&.find { |c| c['type'] == 'output_text' && !c['text'].empty? }
-      raise "No output text returned" if text_block.nil?
+      raise 'No output text returned' if text_block.nil?
 
       text_block['text']
     end
