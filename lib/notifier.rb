@@ -29,10 +29,5 @@ module PromptBox
         err: File::NULL
       )
     end
-
-    def close(after:)
-      sleep(after)
-      system(@binary, '-remove', @group, out: File::NULL, err: File::NULL)
-    end
   end
 end

@@ -28,7 +28,6 @@ begin
   IO.popen(['pbcopy'], 'w') { |pipe| pipe.write(output) }
 
   notifier.show('✅ Result copied to clipboard')
-  notifier.close(after: 2)
 rescue StandardError => e
   notifier.show("🔴 Error: #{e.message}")
   exit 1
