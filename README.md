@@ -7,6 +7,7 @@ An Alfred workflow that lets you quickly run custom LLM prompts using OpenAI's A
 - 🔍 **Quick Search**: Find and run prompts with fuzzy search
 - 📋 **Clipboard Integration**: Run prompts with clipboard content as input
 - ⚡ **Fast Access**: Trigger prompts with a simple keyword (`p`)
+- 🔔 **Background Execution**: Run prompts asynchronously with notifications
 - ✏️ **Easy Management**: Edit your prompt collection in any text editor
 - 📝 **Structured Output**: View formatted responses directly in Alfred
 
@@ -20,6 +21,8 @@ An Alfred workflow that lets you quickly run custom LLM prompts using OpenAI's A
    - Enter your OpenAI API key
    - Select your preferred model (default: gpt-5-mini)
 
+**Note**: The workflow includes a bundled `terminal-notifier` for notifications, so no additional dependencies are required.
+
 ## Usage
 
 ### Running Prompts
@@ -28,11 +31,21 @@ An Alfred workflow that lets you quickly run custom LLM prompts using OpenAI's A
 2. Select a prompt from the list
 3. Two options:
    - **Press ↩**: Run the prompt with custom input
-   - **Press ⌘ + ↩**: Run the prompt with clipboard content as input
+   - **Press ⌘ + ↩**: Run the prompt with clipboard content as input (async mode)
 4. View the AI response in the text view
 5. Choose an action:
    - **Press ⌘ + ↩**: Copy the output to clipboard
    - **Press ⌥ + ↩**: Insert the output into the foremost application
+
+### Async Mode (Background Execution)
+
+When using **⌘ + ↩** to run a prompt with clipboard content, the workflow runs in the background:
+- 🚧 Shows a notification when processing starts
+- ✅ Result automatically copied to clipboard when complete
+- 🔔 Notification auto-dismisses
+- Multiple prompts can run simultaneously without blocking Alfred
+
+This is perfect for quick tasks like "fix grammar", "translate", or "summarize" where you just want the result in your clipboard without waiting in Alfred.
 
 ### Editing Prompts
 
