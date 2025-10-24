@@ -299,7 +299,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>ruby ./bin/run_async.rb $1 &amp; disown</string>
+				<string>ruby ./bin/run_async.rb "$1" &amp; disown</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
