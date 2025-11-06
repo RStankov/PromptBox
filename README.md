@@ -30,8 +30,8 @@ An Alfred workflow that lets you quickly run custom LLM prompts using OpenAI's A
 1. Activate Alfred and type `p` followed by your search query
 2. Select a prompt from the list
 3. Two options:
-   - **Press ↩**: Run the prompt with custom input
-   - **Press ⌘ + ↩**: Run the prompt with clipboard content as input (async mode)
+   - **Press ↩**: Run the prompt with clipboard content as input (async mode)
+   - **Press ⌘ + ↩**: Run the prompt with text view
 4. View the AI response in the text view
 5. Choose an action:
    - **Press ⌘ + ↩**: Copy the output to clipboard
@@ -39,7 +39,7 @@ An Alfred workflow that lets you quickly run custom LLM prompts using OpenAI's A
 
 ### Async Mode (Background Execution)
 
-When using **⌘ + ↩** to run a prompt with clipboard content, the workflow runs in the background:
+When using **↩** to run a prompt with clipboard content, the workflow runs in the background:
 - 🚧 Shows a notification when processing starts
 - ✅ Result automatically copied to clipboard when complete
 - 🔔 Notification auto-dismisses
